@@ -20,6 +20,14 @@ public class ApplicationController {
 	@Autowired
 	private NewsService service;
 
+	public Menu getMenu() {
+		return menu;
+	}
+
+	public NewsService getService() {
+		return service;
+	}
+
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		ApplicationController controller = context.getBean(ApplicationController.class, "controller");
