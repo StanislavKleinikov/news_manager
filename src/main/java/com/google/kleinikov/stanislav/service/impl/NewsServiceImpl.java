@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.kleinikov.stanislav.annotation.Loggable;
 import com.google.kleinikov.stanislav.dao.NewsDao;
 import com.google.kleinikov.stanislav.dto.NewsDTO;
 import com.google.kleinikov.stanislav.entity.News;
@@ -18,6 +19,7 @@ public class NewsServiceImpl implements NewsService {
 	NewsDao newsDao;
 
 	@Override
+	@Loggable
 	public News getNews(int id) throws NoSuchNewsException {
 		News news = newsDao.getNews(id);
 		return news;
