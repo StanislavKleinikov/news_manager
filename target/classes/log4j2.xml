@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appenders>
+		<console name="STDOUT" target="SYSTEM_OUT">
+			<patternlayout pattern="%d{ABSOLUTE} [%t] (%F:%l) - %5m%n" />	
+		</console>	
+	</appenders>
+	<loggers>
+		<logger name="service" level="info">
+			
+		</logger>
+		<root level="error">
+			<appender-ref ref="STDOUT" />
+		</root>
+	</loggers>
+</configuration>
