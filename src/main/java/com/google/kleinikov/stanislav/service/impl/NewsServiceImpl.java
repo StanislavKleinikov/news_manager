@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.kleinikov.stanislav.annotation.Logable;
 import com.google.kleinikov.stanislav.dao.NewsDao;
 import com.google.kleinikov.stanislav.dto.NewsDTO;
 import com.google.kleinikov.stanislav.entity.News;
@@ -30,6 +31,7 @@ public class NewsServiceImpl implements NewsService {
 	}
 
 	@Override
+	@Logable
 	public void removeNews(int id) {
 		newsDao.removeNews(id);
 	}
